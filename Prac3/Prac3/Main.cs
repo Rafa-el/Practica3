@@ -10,12 +10,9 @@ namespace Prac3
 			Funciones fun=new Funciones();
 
 			fun.Menu();
+			fun.Editar();
+			//fun.Eliminar();
 			fun.MostrarDatos();
 		}
-
-			/*string a;
-			a=(string)(dat.tabla[4]);
-			Console.WriteLine(a);*/
-
 	}
 }
