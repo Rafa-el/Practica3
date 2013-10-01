@@ -11,7 +11,7 @@ namespace Prac3
 
 			fun.Menu();
 			fun.Editar();
-			//fun.Eliminar();
+			fun.Eliminar();
 			fun.MostrarDatos();
 		}
 	}

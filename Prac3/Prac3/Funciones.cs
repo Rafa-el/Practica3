@@ -45,13 +45,13 @@ namespace Prac3
 				while(comp.MoveNext()){
 
 					pe = (Persona)(this.tabla[comp.Key]);
+
 					if(akey == pe.codigo){
-						//Console.WriteLine("Son iguales: {0} = {1}", akey, pe.codigo);
 						Console.Write("Ingrese el nuevo nombre: ");
 						pe.nombre = Console.ReadLine();
 						Console.Write("Ingrese el nuevo telefono: ");
 						pe.telefono = Console.ReadLine();
-						Console.WriteLine("Ingrese el nuevo facebook: ");
+						Console.Write("Ingrese el nuevo facebook: ");
 						pe.facebook = Console.ReadLine();
 						break;
 					}
@@ -61,22 +61,13 @@ namespace Prac3
 
 		public void Eliminar ()
 		{
-			string llave;
-
+			string akey;
 			Console.Clear();
 			for (int n=0; n<2; n++) {
 				Console.Write("Ingrese la llave a eliminar: ");
-				llave=Console.ReadLine();
-				for(int i=0;i<16;i++){
-					if(llave == (string)(tabla[i])){
-						tabla.Remove(i);
-						tabla.Remove(i+1);
-						tabla.Remove(i+2);
-						tabla.Remove(i+3);
-						Console.WriteLine("Eliminado");
-					}
+				akey=Console.ReadLine();
 
-				}
+				this.tabla.Remove(akey);
 			}
 		}
 
