@@ -42,6 +42,10 @@ namespace Prac3
 				Console.WriteLine("Ingrese la llave a editar: ");
 				akey=Console.ReadLine();
 
+				if(!this.tabla.ContainsKey(akey)){ 
+					Console.WriteLine("La llave " + akey + " no existe");
+					Console.ReadKey();}
+
 				while(comp.MoveNext()){
 
 					pe = (Persona)(this.tabla[comp.Key]);
@@ -67,6 +71,7 @@ namespace Prac3
 				Console.Write("Ingrese la llave a eliminar: ");
 				akey=Console.ReadLine();
 
+				if(!this.tabla.ContainsKey(akey)) Console.WriteLine("La llave " + akey + " no existe");
 				this.tabla.Remove(akey);
 			}
 		}
